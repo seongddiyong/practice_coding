@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
+// 1000 덧셈 문제
 void baek1000(int a, int b) {
     int result = a + b;
 
     cout << "RESULT : " << result << "\n" << endl;
 }
 
+// 1001 뺄셈 문제
 void baek1001(int a, int b) {
     int result = a - b;
 
