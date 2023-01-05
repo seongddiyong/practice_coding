@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-long long arr[50] = {0,1,};
+long long arr[41] = {0,1,};
 
 long long fibonacci(int n) {
     if (n == 0 || n == 1) {
