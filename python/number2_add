@@ -20,7 +20,7 @@ while True:
         break
     result += second
     m -= 1
-
+    # m이 다하면 끝!
 print(result)
     
 
