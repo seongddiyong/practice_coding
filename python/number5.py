@@ -12,8 +12,8 @@ move_types = ['L','R','U','D']
 for plan in plans :
     for i in range(len(move_types)):
         if plan == move_types[i]:
-            nx = x+dx[i]
-            ny = y+dy[i]
+            nx = x+dx[i]    // 세로축 이동
+            ny = y+dy[i]    // 가로축 이동
 
     if nx<1 or ny<1 or nx>N or ny>N :
         continue
