@@ -11,3 +11,17 @@ a = round(12.456,2)     #12.46
 
 print("반올림 함수 - round")
 print(a)
+
+## 리스트 컴프리핸션
+
+# 0 부터 19까지 수 중 홀수만 포함하는 리스트 생성
+array = [i for i in range(20) if i%2==1]
+print("리스트 컴프리핸션")
+print(array)
+
+# 초기화는?
+## 기존에 있는 리스트
+print("리스트 초기화")
+### 아예 비워버리기
+array = []
+print(array)
