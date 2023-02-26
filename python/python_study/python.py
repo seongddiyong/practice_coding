@@ -25,3 +25,10 @@ print("리스트 초기화")
 ### 아예 비워버리기
 array = []
 print(array)
+
+## 2차원 리스트 초기화
+n = 3
+m = 3
+array = [[0] * m for _ in range(n)]
+print("2차원 리스트 초기화")
+print(array)
