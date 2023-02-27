@@ -32,3 +32,4 @@ m = 3
 array = [[0] * m for _ in range(n)]
 print("2차원 리스트 초기화")
 print(array)
+a = array.count()
