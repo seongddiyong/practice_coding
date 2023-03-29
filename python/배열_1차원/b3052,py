@@ -1,0 +1,7 @@
+result = 10
+list = [0]*10
+for i in range(10):
+    a = int(input())
+    list[i] = a%42
+list = set(list)
+print(len(list))
