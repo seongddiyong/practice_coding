@@ -9,7 +9,5 @@ for i in range(c):
     for j in score[1:]:
         if avg < j:
             result += 1
-
     a = "{:.3f}%".format(round((result/score[0])*100,3))
     print(a)
-
