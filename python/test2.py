@@ -1,2 +1,6 @@
-a = [1,2,3,4,5,6,1,1,1,1,2,2,2,4,5,6,7]
-print(a.find('1'))
+cur_y,cur_x = (0,0)
+
+for dy, dx in [(-1,0), (1,0), (0,-1), (0,1)]:
+    next_y = cur_y + dy
+    next_x = cur_x + dx
+    print("dy::",dy,"dx::",dx)
