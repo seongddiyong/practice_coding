@@ -4,9 +4,9 @@
 from sys import stdin
 import heapq
 
-print("this is input the input")
 input = stdin.readline
 
+# min heap sort
 def heapsort(iterable):
     h = []
     result = []
@@ -20,7 +20,6 @@ def heapsort(iterable):
         result.append(heapq.heappop(h))
     return result
 
-print("this is input the n")
 n = int(input())
 arr = []
 
