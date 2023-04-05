@@ -1,3 +1,3 @@
 from sys import stdin
-a, b = stdin.readline().rstrip().split()
-print(int(a, int(b)))
+a, b = map(int,stdin.readline().rstrip().split())
+print(int(str(a), b))

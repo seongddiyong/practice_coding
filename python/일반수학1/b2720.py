@@ -1,7 +1,6 @@
 #세탁소 사장 동혁
 
 from sys import stdin
-
 input = stdin.readline
 
 t = int(input())
