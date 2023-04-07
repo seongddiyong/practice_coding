@@ -1,6 +1,5 @@
-a = list(map(int, input().split()))
-
-indexOfMax = a.index(max(a))
-if max(a) >= (sum(a) - max(a)):     # 더 작은 두 변의 합
-    a[indexOfMax] =  (sum(a)-max(a)-1)
-print(sum(a))
+ls = sorted(list(map(int, input().split())))
+if ls[0] + ls[1] > ls[2]:
+    print(sum(ls))
+else:
+    print((ls[0] + ls[1]) * 2 - 1)
