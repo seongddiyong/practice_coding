@@ -3,7 +3,7 @@ while 1:
     if a == b == c == 0:
         break
     elif max(a,b,c) >= ((a+b+c)-max(a,b,c)):
-        print("Invaild")
+        print("Invalid")
     elif a==b==c:
         print("Equilateral")
     elif a==b!=c or b==c!=a or a==c!=b:
