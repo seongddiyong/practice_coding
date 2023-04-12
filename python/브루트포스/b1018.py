@@ -24,4 +24,8 @@ for i in range(n-7):
                         draw1 += 1
                     if board[a][b] != 'B':
                         draw2 += 1
+        result.append(draw1)
+        result.append(draw2)
+ 
+print(min(result))
 
