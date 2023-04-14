@@ -4,7 +4,9 @@ input = stdin.readline
 n = int(input())
 temp = []
 for _ in range(n):
-    temp.append((input().split()))
-result = sorted(temp, key = lambda x:x[0])
-for i,j in result:
-    print(i,j)
+    age, name = map(str,input().split())
+    age = int(age)
+    temp.append((age,name))
+temp.sort(key = lambda x:x[0])
+for i in temp:
+    print(i[0],i[1])
