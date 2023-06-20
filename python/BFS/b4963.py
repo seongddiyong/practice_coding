@@ -1,33 +1,20 @@
 from collections import deque
 import sys
 input = sys.stdin.readline
+sys.setrecursionlimit(10000)
 
 dx = [0,0,-1,1,1,1,-1,-1]
 dy = [1,-1,0,0,1,-1,1,-1]
 
-def bfs(x,y):
-    global cnt
-    queue = deque()
-    queue.append((x,y))
-
-    while queue:
-        x,y = queue.popleft()
-
+def dfs(x,y):
+    if x < 0 or y < 0 or x >= h or y >= w:
+        return
+    if graph[x][y] == 1:
+        graph[x][y] = 0
         for i in range(8):
-            nx = x + dx
-            ny = y + dy
-            # 범위 벗어나면 넘기기
-            if nx < 0 or nx >= w or ny < 0 or ny >= h:
-                continue
-            # 물이면 넘기기
-            if graph[nx][ny] == 0:
-                continue
-
-            if graph[nx][ny] == 1:
-                graph[nx][ny] = graph[x][y] + 1
-                queue.append((nx,ny))
-
-    
+            nx = x + dx[i]
+            ny = y + dy[i]
+            dfs(nx,ny)
 
 while True:
     w,h = map(int, input().split())
@@ -37,9 +24,12 @@ while True:
     graph = []
     for _ in range(h):
         graph.append(list(map(int, input().split())))
-
-    visited = [[0]*w for _ in range(h)]
     
     cnt = 0
-    bfs(0,0)
+    for i in range(h):
+        for j in range(w):
+            if graph[i][j] == 1:
+                dfs(i,j)
+                cnt += 1
+
     print(cnt)
