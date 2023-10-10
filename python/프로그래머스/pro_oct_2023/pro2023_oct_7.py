@@ -1,8 +1,6 @@
 def solution(n,a,b):
     if a > b:
-        temp = a
-        a = b
-        b = temp
+        a,b = b,a
     ans = 0
     while True:
         if abs(b-a) == 1 and a%2 == 1:
