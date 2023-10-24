@@ -7,4 +7,4 @@ d = {}
 for k,i in enumerate(ascii_lowercase):
 	d[i] = k+1
 m = [d[s[i]]*(31**i) for i in range(n)]
-print(sum(m))
+print(sum(m)%1234567891)
