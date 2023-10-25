@@ -18,7 +18,7 @@ while n != 1:
         n -= 1
         start[0] = smax
         temp = 2
-    else:
+    elif smax<=r<=smax+t and smax <= c <= smax+t:
         n -= 1
         start = [smax,smax]
         temp = 3
