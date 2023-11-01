@@ -9,3 +9,5 @@ for i in range(int(input())):
        print("YES")
    else:
        print("NO")
+
+## 이 코드에 대해 import re 를 파악하지 못했음
