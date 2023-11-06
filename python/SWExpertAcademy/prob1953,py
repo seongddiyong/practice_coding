@@ -1,0 +1,37 @@
+from collections import deque
+
+dx = [0,0,-1,1]
+dy = [1,-1,0,0]
+recent = [[],[1,1,1,1],[1,1,0,0],[0,0,1,1],[1,0,0,1],[0,1,0,1],[0,1,1,0],[1,0,1,0]]
+canGo = [[1,2,4,7],[1,2,5,6],[1,3,4,5],[1,3,6,7]]
+
+def bfs(x,y):
+    global ans
+    visited = [[0]*M for _ in range(N)]
+    q = deque()
+    q.append((x,y))
+    visited[y][x] = 1
+    while q:
+        x,y = q.popleft()
+        for i in range(4):
+            if recent[g[y][x]][i] == 0 or visited[y][x] == L:
+                continue
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if 0 <= nx < M and 0 <= ny < N and visited[ny][nx] == 0 and g[ny][nx] != 0:
+                if g[ny][nx] in canGo[i]:
+                    q.append((nx,ny))
+                    visited[ny][nx] = visited[y][x] + 1
+                    ans += 1
+
+for t in range(int(input())):
+    # 세로, 가로, 맨홀위치 r/c, 시간 
+    N, M, R, C, L = map(int, input().split())
+    g = [list(map(int, input().split())) for _ in range(N)]
+    ans = 1
+    cnt = 1
+    if L != 1:
+        bfs(C,R)
+    print('#{} {}'.format(t+1,ans))
+
+# go = [0,[1,1,1,1],[1,1,0,0],[0,0,1,1],[1,0,0,1],[0,1,0,1],[0,1,1,0],[1,0,1,0]]
